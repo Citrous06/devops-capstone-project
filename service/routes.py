@@ -6,7 +6,7 @@ This microservice handles the lifecycle of Accounts
 # pylint: disable=unused-import
 from flask import jsonify, request, make_response, abort, url_for   # noqa; F401
 from service.models import Account
-from service.common import status # HTTP Status Codes
+from service.common import status  # HTTP Status Codes
 from . import app  # Import Flask application
 
 
@@ -62,6 +62,7 @@ def create_accounts():
 ######################################################################
 
 # ... place you code here to LIST accounts ...
+
 @app.route("/accounts", methods=["GET"])
 def list_accounts():
     """Lists all Accounts"""
@@ -76,6 +77,7 @@ def list_accounts():
 ######################################################################
 
 # ... place you code here to READ an account ...
+
 @app.route("/accounts/<int:account_id>",  methods=["GET"])
 def get_accounts(account_id):
     """Reads a account based on account_id"""
@@ -89,6 +91,7 @@ def get_accounts(account_id):
 ######################################################################
 
 # ... place you code here to UPDATE an account ...
+
 @app.route("/accounts/<int:account_id>", methods=["PUT"])
 def update_accounts(account_id):
     """Updates a given account, based on the account_id """
@@ -105,6 +108,7 @@ def update_accounts(account_id):
 ######################################################################
 
 # ... place you code here to DELETE an account ...
+
 @app.route("/accounts/<int:account_id>", methods=["DELETE"])
 def delete_accounts(account_id):
     """Deletes an Account based on account_id"""
